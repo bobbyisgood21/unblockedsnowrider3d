@@ -3,81 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bobby's Game Hub</title>
+    <title>Unblocked Games Portal</title>
     <style>
+        /* Modern Dark Theme */
         body { 
-            background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
-            color: #ffffff; 
+            background: radial-gradient(circle at top, #1a1c2c 0%, #07080c 100%);
+            color: #00ffcc; 
             text-align: center; 
-            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             margin: 0; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            padding: 20px;
+            min-height: 100vh;
         }
 
-        .container {
-            background: rgba(22, 27, 34, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 204, 0.4);
-            padding: 60px;
-            border-radius: 30px;
-            box-shadow: 0 0 50px rgba(0, 255, 204, 0.15);
-            width: 80%;
-            max-width: 500px;
+        header {
+            padding: 20px 0;
+            margin-bottom: 20px;
         }
 
         h1 { 
-            font-size: 50px; 
-            margin: 0 0 10px 0;
-            background: linear-gradient(to bottom, #fff, #00ffcc);
+            font-size: 42px; 
+            letter-spacing: 4px;
+            margin: 0;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #fff, #00ffcc, #fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.5));
         }
 
-        p { color: #8b949e; font-size: 18px; margin-bottom: 30px; }
-
-        .play-button {
-            background: #00ffcc;
-            color: #0b0e14;
-            padding: 20px 50px;
-            font-size: 24px;
-            font-weight: 800;
-            border-radius: 15px;
-            text-decoration: none;
+        /* The Game Frame Container */
+        .game-container {
+            position: relative;
             display: inline-block;
-            transition: 0.2s;
-            text-transform: uppercase;
+            width: 90%;
+            max-width: 1000px;
+            background: #000;
+            border: 2px solid #00ffcc;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.2);
+            aspect-ratio: 16 / 9; /* Keeps the game box shaped correctly */
         }
 
-        .play-button:hover {
-            transform: scale(1.05);
-            background: #fff;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
-        .status-badge {
-            margin-top: 40px;
+        /* Status Indicators */
+        .footer-info {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .status {
             font-size: 12px;
-            letter-spacing: 2px;
-            color: #00ffcc;
-            font-weight: bold;
+            color: #555;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #00ffcc;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>SNOW RIDER 3D</h1>
-        <p>UNBLOCKED PORTAL</p>
-        
-        <a href="https://itsvijaysingh.github.io/Snow-Rider3D/" 
-           target="_blank" class="play-button">PLAY NOW</a>
+    <header>
+        <h1>UNBLOCKED GAMES</h1>
+    </header>
 
-        <div class="status-badge">
-             Verified Developer: Bobby
-        </div>
+    <div class="game-container">
+        <iframe src="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk160/gjv3@main/sr3d/sr3d.xml" 
+                allowfullscreen="true"></iframe>
+    </div>
+
+    <div class="footer-info">
+        <div class="status"><span class="dot"></span> SERVER: ONLINE</div>
+        <div class="status"><span class="dot"></span> CONNECTION: SECURE</div>
     </div>
 
 </body>
